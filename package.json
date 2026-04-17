@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "node --watch src/server.js",
     "start": "node src/server.js",
-    "test": "NODE_OPTIONS=--experimental-vm-modules jest --runInBand",
+    "test": "CROSS-ENV NODE_OPTIONS=--experimental-vm-modules jest --runInBand",
     "test:win": "set NODE_OPTIONS=--experimental-vm-modules&& jest --runInBand"
   },
   "keywords": [
@@ -21,6 +21,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "cross-env": "^10.1.0",
+    "dotenv": "^17.4.2",
     "express": "^4.19.2",
     "mongoose": "^8.8.0"
   },
